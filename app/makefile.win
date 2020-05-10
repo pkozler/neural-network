@@ -1,0 +1,9 @@
+BIN = neural_net.exe
+OBJ = main.obj edge.obj load.obj classify.obj
+
+.c.obj:
+	cl $< /c
+
+$(BIN): $(OBJ)
+	cl $(OBJ) /Fe$(BIN)
+
